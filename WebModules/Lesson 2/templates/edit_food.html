@@ -9,17 +9,11 @@
 <body>
     <form method='post'>
         <label>Dish</label>
-        <input name='name'/>
+        <input name='name'value='{{food.name}}'/>
         <label>Price</label>
-        <input name='price'/>
+        <input name='price'value='{{food.price}}'/>
         <p><input type = 'submit' value='submit'></p>
-    </form>
-    {% for item in menu_data %}
-    <h3>
-        {{ item.name }}
-        :
-        {{ item.price }}K
-    </h3>
-    {% endfor %}    
+    </form>  
+
 </body>
 </html>
