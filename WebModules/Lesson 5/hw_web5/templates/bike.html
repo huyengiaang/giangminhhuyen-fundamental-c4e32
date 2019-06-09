@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="static/bike.css"> -->
+    <style>
+        body form div {
+            margin-left: 200px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+            text-align: center;
+            text-indent: none;
+            font-style: italic;
+        }
+        body form h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+           <h3>
+            <label>Model</label>
+            <input name = 'model'></input>
+        </h3>
+        <h3>
+            <label>Daily fee (VND)</label>
+            <input name = 'fee'>
+        </h3>
+        <h3>
+            <label>Image</label>
+            <input name = 'image'>
+        </h3>
+        <h3>
+            <label>Year</label>
+            <input name = 'year'>
+        </h3>
+        <p><input type = 'submit' value='Submit'></p> 
+        </div>
+        
+        
+        {% for item in data %}
+        <h4>
+            {{ item.model }}
+        </h4>
+        <h4>
+            {{ item.fee }}
+        </h4>
+        <h4>
+            {{ item.image}}
+        </h4>
+        <h4>
+            {{ item.year}}
+        </h4>
+        {% endfor %}
+    </form>
+</body>
+</html>
